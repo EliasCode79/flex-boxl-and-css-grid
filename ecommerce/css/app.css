@@ -1,6 +1,7 @@
 /* es para q no with de un elemento no se incremente cuando agregamos un padding */
 html {
 	box-sizing: border-box;
+	font-size: 62.5%; /* hack, con esto logramos con 1REM = 10px */
 }
 
 *,
@@ -9,23 +10,44 @@ html {
 	box-sizing: inherit;
 }
 
+body {
+	font-family: 'Relesay', sans-serif;
+	font-size: 1.6rem;
+}
+
 /* Globales */
+
+h1,
+h2,
+h3 {
+	font-family: 'Playfair Display', serif;
+}
+
+h3 {
+	font-size: 3rem;
+}
 a {
 	text-decoration: none;
 	color: #000;
 }
 
 .contenedor {
-	max-width: 1200px;
+	max-width: 120rem;
 	margin: 0 auto;
 	/* margin-inline: auto; en nuevas version margin: 0 auto, es replazado por este de aca */
 }
 
+img {
+	max-width: 100%;
+	display: block;
+}
+
 /* Header y Navegacion */
 .nombre-sitio {
-	margin-top: 50px;
-	margin-bottom: 50px;
+	margin-top: 5rem;
+	margin-bottom: 5rem;
 	text-align: center;
+	font-size: 4rem;
 }
 .nombre-sitio span {
 	color: #025bc0;
@@ -35,12 +57,37 @@ a {
 	border-top: 1px solid #e1e1e1;
 }
 .nav-principal {
-	padding: 20px 0;
+	padding: 2rem 0;
+	display: flex;
+	justify-content: space-between;
 }
 
 .hero {
 	background-image: url(../img/principal.jpg);
-	height: 550px;
+	height: 55rem;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
+/* Cateogiras */
+.categorias h2 {
+	text-align: center;
+}
+.categoria a {
+	text-align: center;
+	display: block;
+	padding: 2rem;
+	font-size: 2rem;
+	border-bottom-right-radius: 1rem;
+}
+
+.categoria a:hover {
+	background-color: #025bc0;
+	color: #fff;
+}
+
+.listado-categorias {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
 }
