@@ -49,6 +49,25 @@ img {
 	display: block;
 }
 
+.btn {
+	background-color: #8cbc00;
+	display: block;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 900;
+	padding: 1rem;
+	transition: background-color 0.3s ease-out;
+}
+
+.btn:hover {
+	background-color: #769c02;
+}
+
+/* Utilidades */
+.text-center {
+	text-align: center;
+}
+
 /* Header y Navegacion */
 .nombre-sitio {
 	margin-top: 5rem;
@@ -110,4 +129,75 @@ img {
 	background-repeat: no-repeat;
 	background-position: left center;
 	background-size: 100%, 140rem;
+}
+
+.sobre-nosotros-grid {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.texto-nosotros {
+	flex-basis: 50%;
+	padding-left: 5rem;
+	color: #fff;
+}
+
+/* Listado de Productos */
+
+.contenido-principal {
+	padding-top: 5rem;
+}
+
+.listado-productos {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 2rem;
+}
+
+/* la clase y psedoselector debe ir juntos y los separamos por un espacio estaria tomando los elementos hijos de producto, nosotros queremos q tome los elementos q tiene la clase productos */
+.producto:nth-child(1) {
+	grid-column-start: 1;
+	grid-column-end: 7;
+}
+.producto:nth-child(2) {
+	grid-column-start: 1;
+	grid-column-end: 4;
+}
+.producto:nth-child(3) {
+	grid-column-start: 4;
+	grid-column-end: 7;
+}
+.producto:nth-child(4) {
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+.producto:nth-child(5) {
+	grid-column-start: 3;
+	grid-column-end: 5;
+}
+.producto:nth-child(6) {
+	grid-column-start: 5;
+	grid-column-end: 7;
+}
+
+.producto {
+	background-color: #037bc0;
+}
+
+.texto-producto {
+	text-align: center;
+	color: #fff;
+	padding: 2rem;
+}
+
+.texto-producto h3 {
+	margin: 0;
+}
+
+.texto-producto p {
+	margin: 0 0 0.5rem 0;
+}
+.texto-producto .precio {
+	font-size: 2.8rem;
+	font-weight: 900;
 }
