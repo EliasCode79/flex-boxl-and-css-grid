@@ -32,17 +32,17 @@
 		</div>
 
 		<main class="contenido-principal contenedor">
-			<h2 class="text-center">Contactame</h2>
-			<form action="">
+			<h2 class="text-center">Contacto</h2>
+			<form class="formulario">
 				<fieldset>
 					<legend>Tus Datos</legend>
 					<div class="campo">
 						<label for="name">Nombre:</label>
-						<input type="text" name="name" id="name" placeholder="tu nombre" />
+						<input type="text" name="name" id="name" placeholder="tu nombre" required />
 					</div>
 					<div class="campo">
 						<label for="asunto">Asunto:</label>
-						<input type="text" name="asunto" id="asunto" placeholder="tu asunto" />
+						<input type="text" name="asunto" id="asunto" placeholder="tu asunto" required />
 					</div>
 					<div class="campo">
 						<label for="email">Email:</label>
@@ -94,6 +94,7 @@
 						</datalist>
 					</div>
 				</fieldset>
+				<input class="btn" type="submit" value="Enviar Formulario" />
 			</form>
 		</main>
 
